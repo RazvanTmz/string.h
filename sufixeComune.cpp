@@ -33,5 +33,6 @@ int main()
           }
 
 
-    cout<<"Sufixul comun : "<<s3;
+    if(k > 2) cout<<"Sufixul comun : "<<s3;
+    else cout<<"Nu exista sufixe comune!";
 }
