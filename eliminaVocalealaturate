@@ -1,0 +1,47 @@
+@@ -0,0 +1,46 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+
+
+void elimina(char s[])
+{
+    int i = 0, l = strlen(s), c = 0;
+
+    while(c <= l)
+    {
+       if(strchr("aeiou", s[i]) && strchr("aeiou", s[i + 1]))
+            {
+
+
+                strcpy(s + i + 1, s + i + 2);
+                c++;
+
+                if(s[i] == ' ')
+                {
+                    while(s[i] == ' ' && s[i + 1] == ' ')
+                        i++;
+                }
+
+            }
+
+        else {i++;c++;}
+
+
+    }
+}
+
+
+
+
+
+main()
+{
+    char s[51];
+    cout<<"Sirul : ";cin.get(s, 50);
+    elimina(s);
+    cout<<"Sirul prelucrat : "<<s;
+}
+
